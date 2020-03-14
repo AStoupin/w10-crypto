@@ -8,9 +8,9 @@ ENV LC_ALL en_US.UTF-8
 COPY --chown=jboss ./docker/jcp-2.0.39014.zip /tmp
 COPY --chown=jboss ./docker/jce_policy-8.zip  /tmp
 
-#copy keys
+# Copy keys
 COPY --chown=jboss ./docker/keys/.  /var/opt/cprocsp/keys/jboss
-#Override default standalone.conf with -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2
+# Override default standalone.conf with -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2
 COPY --chown=jboss ./docker/standalone.conf /opt/jboss/wildfly/bin
 
 COPY --chown=jboss ./docker/customization/. /opt/jboss/wildfly/customization
@@ -26,7 +26,7 @@ RUN unzip /tmp/jcp-2.0.39014.zip -d /tmp/cryptopro && \
 
 
 
-#Override CryptoPro default settings and set license (taken from Dergachev's cryptoPro install procedure)
+# Override CryptoPro default settings and set license (taken from Dergachev's cryptoPro install procedure)
 #COPY --chown=jboss ./docker/CryptoProPrefs/ru/. /etc/.java/.systemPrefs/ru
 #COPY --chown=jboss ./docker/CryptoProPrefs/bcprov-jdk15on-159.jar  /usr/java/default/jre/lib/ext
 #COPY --chown=jboss ./docker/CryptoProPrefs/bcpkix-jdk15on-159.jar  /usr/java/default/jre/lib/ext
