@@ -1,0 +1,8 @@
+# Default CLI script
+connect
+batch
+
+
+# Execute and reload
+run-batch
+:reload
