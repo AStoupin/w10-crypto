@@ -24,6 +24,10 @@ ru.CryptoPro.JCP.tools.License -serial "serial_number" -company "company_name" -
 
 Также можно проверить заданную лицензию без ее установки: ru.CryptoPro.JCP.tools.License -serial "serial_number" -company "company_name" 
 
+ Ввод лицензии JTLS серийного номера <JRE>/bin/java -cp cpSSL.jar ru.CryptoPro.ssl.JTLSInstall -install -verbose -sslserial XXXXX-XXXXX-XXXXX-XXXXX-XXXXX -sslcompany "My Company" Вместо -sslcompany "My Company" возможно использование ключа -sslcombase 
+ 
+ 
+ 
 Дату первой установки можно узнать с помощью команды: ru.CryptoPro.JCP.tools.License -first 
 
 Для вывода справки: ru.CryptoPro.JCP.tools.License ?

@@ -31,6 +31,9 @@ RUN unzip /tmp/jcp-2.0.39014.zip -d /tmp/cryptopro && \
 #COPY --chown=jboss ./docker/CryptoProPrefs/bcprov-jdk15on-159.jar  /usr/java/default/jre/lib/ext
 #COPY --chown=jboss ./docker/CryptoProPrefs/bcpkix-jdk15on-159.jar  /usr/java/default/jre/lib/ext
 #COPY --chown=jboss ./docker/CryptoProPrefs/java.security  /usr/java/default/jre/lib/security    
+#/tmp/cryptopro/jcp-2.0.39014/dependencies/bcpkix-jdk15on-1.50.jar
+#/tmp/cryptopro/jcp-2.0.39014/dependencies/bcprov-jdk15on-1.50.jar
+
 
 USER jboss
 
