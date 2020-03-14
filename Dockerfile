@@ -10,6 +10,8 @@ COPY --chown=jboss ./docker/jce_policy-8.zip  /tmp
 
 #copy keys
 COPY --chown=jboss ./docker/keys/.  /var/opt/cprocsp/keys/jboss
+#Override default standalone.conf with -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2
+COPY --chown=jboss ./docker/standalone.conf /opt/jboss/wildfly/bin
 
 COPY --chown=jboss ./docker/customization/. /opt/jboss/wildfly/customization
 
